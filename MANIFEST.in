@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include apollo *.css
+recursive-include apollo *.csv
+recursive-include apollo *.html
+recursive-include apollo *.ico
+recursive-include apollo *.js
+recursive-include apollo *.json
+recursive-include apollo *.md
+recursive-include apollo *.png
+recursive-include apollo *.py
+recursive-include apollo *.svg
+recursive-include apollo *.txt
+recursive-exclude apollo *.pyc
