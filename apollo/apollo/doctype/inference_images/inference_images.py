@@ -3,8 +3,10 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 class InferenceImages(Document):
-	pass
+	def on_submit(self):
+		if self.inference_status=="Pending":
+			frappe.throw("Please set inference status before submiting.")
