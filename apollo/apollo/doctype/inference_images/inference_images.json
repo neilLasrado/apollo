@@ -6,8 +6,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "image_file",
   "inference_status",
+  "image_file",
   "amended_from"
  ],
  "fields": [
@@ -21,8 +21,10 @@
   {
    "fieldname": "inference_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Inference Status",
-   "options": "Pending\nDone",
+   "options": "Pending\nGood\nNot Good",
    "permlevel": 1
   },
   {
@@ -36,7 +38,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2023-01-07 01:16:07.699159",
+ "modified": "2023-01-09 12:55:06.596222",
  "modified_by": "Administrator",
  "module": "Apollo",
  "name": "Inference Images",
@@ -69,6 +71,7 @@
    "write": 1
   },
   {
+   "delete": 1,
    "email": 1,
    "export": 1,
    "permlevel": 1,
