@@ -1,0 +1,48 @@
+{
+ "creation": "2023-01-09 19:42:09.382883",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "result",
+  "download",
+  "column_break_2",
+  "inference_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "result",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Result",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inference_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Inference Status",
+   "options": "\nGood\nNot Good"
+  },
+  {
+   "fieldname": "download",
+   "fieldtype": "Button",
+   "label": "Download"
+  }
+ ],
+ "istable": 1,
+ "modified": "2023-01-09 21:02:33.317057",
+ "modified_by": "Administrator",
+ "module": "Apollo",
+ "name": "Inference Image Result",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

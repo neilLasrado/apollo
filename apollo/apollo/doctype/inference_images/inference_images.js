@@ -6,3 +6,11 @@ frappe.ui.form.on('Inference Images', {
 
 	// }
 });
+
+frappe.ui.form.on('Inference Image Result', {
+    download: (frm, cdt, cdn) => {
+		let row = locals[cdt][cdn];
+		var win = window.open(row.result, '_blank');
+ 		win.focus();
+	}
+});

@@ -8,6 +8,8 @@
  "field_order": [
   "inference_status",
   "image_file",
+  "section_break_3",
+  "results",
   "amended_from"
  ],
  "fields": [
@@ -24,7 +26,12 @@
    "in_standard_filter": 1,
    "label": "Inference Status",
    "options": "Pending\nGood\nNot Good",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "amended_from",
@@ -34,10 +41,17 @@
    "options": "Inference Images",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Table",
+   "label": "Results",
+   "options": "Inference Image Result",
+   "permlevel": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2023-01-09 13:26:03.649994",
+ "modified": "2023-01-09 21:03:45.177282",
  "modified_by": "Administrator",
  "module": "Apollo",
  "name": "Inference Images",

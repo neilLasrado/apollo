@@ -7,6 +7,10 @@ import frappe
 from frappe.model.document import Document
 
 class InferenceImages(Document):
-	def on_submit(self):
-		if self.inference_status=="Pending":
-			frappe.throw("Please set inference status before submiting.")
+	def before_submit(self):
+		self.inference_status = "Good"
+		for result in self.results:
+			if not result.inference_status:
+				frappe.throw("Please set inference status for result row {0} before submiting.".format(result.idx))
+			elif result.inference_status == "Not Good":
+				self.inference_status = "Not Good"
