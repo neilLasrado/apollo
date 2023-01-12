@@ -6,8 +6,10 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "inference_status",
+  "image_file_name",
   "image_file",
+  "column_break_3",
+  "inference_status",
   "section_break_3",
   "results",
   "amended_from"
@@ -16,7 +18,7 @@
   {
    "fieldname": "image_file",
    "fieldtype": "Attach",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Image File",
    "reqd": 1
   },
@@ -48,16 +50,27 @@
    "label": "Results",
    "options": "Inference Image Result",
    "permlevel": 1
+  },
+  {
+   "fieldname": "image_file_name",
+   "fieldtype": "Data",
+   "label": "Image File Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
   }
  ],
  "is_submittable": 1,
- "modified": "2023-01-09 21:03:45.177282",
- "modified_by": "Administrator",
+ "modified": "2023-01-12 17:21:05.173986",
+ "modified_by": "nlasrado@gmail.com",
  "module": "Apollo",
  "name": "Inference Images",
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
    "cancel": 1,
    "create": 1,
    "delete": 1,
@@ -109,6 +122,7 @@
  "restrict_to_domain": "Apollo",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "image_file_name",
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1

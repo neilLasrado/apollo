@@ -7,6 +7,9 @@ import frappe
 from frappe.model.document import Document
 
 class InferenceImages(Document):
+	def validate(self):
+		self.image_file_name = self.image_file[15:]
+
 	def before_submit(self):
 		self.inference_status = "Good"
 		for result in self.results:
